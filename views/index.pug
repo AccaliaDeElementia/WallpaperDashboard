@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  img.background
+  img.foreground
+  div.leftColumn.datetime
+    h2.date
+    h1.time
+  div.rightColumn.weather
+    h2.description
+    h2.humidity
+    h2.fahrenheit
+    h1.celcius
+  div.alert
+    div.body
+      div.alerttitle
+      div.alerttext
+  script(src="/socket.io/socket.io.js")
+  script(src="javascripts/index.js")
