@@ -49,8 +49,8 @@
   })
 
   document.addEventListener('keyup', (evt) => {
-      if (evt.key === ' ') {
-          socket.emit('cycleWallpaper')
-      }
+    if (evt.key === ' ') {
+      socket.emit('cycleWallpaper')
+    }
   })
 })()
