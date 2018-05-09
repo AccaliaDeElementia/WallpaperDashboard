@@ -22,7 +22,14 @@
     setField('.weather .humidity', `${Math.round(weather.relativeHumidity)}%&#x1f4a7;`)
   }
 
-  const updateWallpaper = (_, uri) => {
+  let lastUpdate;
+  const updateWallpaper = (_, uri, manual) => {
+    const now = Date.now()
+    if (lastUpdate){
+      console.log(`Cycling background after: ${now - lastUpdate}ms (${manual?'manual':'automatic'})`)
+    }
+    lastUpdate = now
+
     document.querySelector('img.background').src = uri
     document.querySelector('img.foreground').src = uri
   }
