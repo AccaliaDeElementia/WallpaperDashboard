@@ -22,11 +22,11 @@
     setField('.weather .humidity .text', `${Math.round(weather.relativeHumidity)}%`)
   }
 
-  let lastUpdate;
+  let lastUpdate
   const updateWallpaper = (_, uri, manual) => {
     const now = Date.now()
-    if (lastUpdate){
-      console.log(`Cycling background after: ${now - lastUpdate}ms (${manual?'manual':'automatic'})`)
+    if (lastUpdate) {
+      console.log(`Cycling background after: ${now - lastUpdate}ms (${manual ? 'manual' : 'automatic'})`)
     }
     lastUpdate = now
 
