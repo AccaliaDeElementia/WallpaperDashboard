@@ -19,7 +19,7 @@
     setField('.weather .description', weather.description)
     setField('.weather .fahrenheit', `${Math.round(weather.temperature * 9 / 5 + 32, 2)}&deg;F`)
     setField('.weather .celcius', `${Math.round(weather.temperature, 2)}&deg;C`)
-    setField('.weather .humidity', `${Math.round(weather.relativeHumidity)}%&#x1f4a7;`)
+    setField('.weather .humidity .text', `${Math.round(weather.relativeHumidity)}%`)
   }
 
   let lastUpdate;
