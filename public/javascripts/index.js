@@ -58,6 +58,8 @@
   document.addEventListener('keyup', (evt) => {
     if (evt.key === ' ') {
       socket.emit('cycleWallpaper')
+    } else if (evt.key === 'r') {
+      socket.emit('randomizeWallpaper')
     }
   })
 })()
